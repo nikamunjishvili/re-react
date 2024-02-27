@@ -19,6 +19,7 @@ function App() {
         ...prev,
         { id: prev.length + 1, text: input, completed: false },
       ]);
+      setInput("")
     }
   }
 
@@ -45,9 +46,10 @@ function App() {
 
   return (
     <div className={dark ? "dark" : "light"}>
-      {/* <button onClick={() => setDark((prev) => !prev)}>toggle</button>
+      <button onClick={() => setDark((prev) => !prev)}>toggle</button>
       <Input
         type="text"
+        value={input}
         onChanged={(e) => setInput(e.target.value)}
         placeholder="enter your task..."
         width={200}
@@ -77,7 +79,7 @@ function App() {
             />
           );
         })}
-      </div> */}
+      </div>
 
       <input
         type="text"

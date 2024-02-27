@@ -9,10 +9,12 @@ const Input = ({
   border,
   onChanged,
   outline,
+  value
 }) => {
   return (
     <input
       type={type}
+      value={value}
       placeholder={placeholder}
       style={{
         border: border,
